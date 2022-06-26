@@ -104,7 +104,7 @@
 			window.crc_engine=new BiliBili_midcrc();
 			
 			
-                        document.addEventListener("load", function (e) {
+                        document.body.addEventListener("load", function (e) {
 				document.getElementById("run").addEventListener("click", function (e) {
                                 	document.getElementById("result").value = crc_engine(document.getElementById("hash_uid").value);
                         	});
@@ -112,7 +112,7 @@
 		</script>
 	</head>
 	<body>
-		<input id="hash_uid" type="text" placeholder="Enter CRC32-hashed uid here"></input>
+		<input id="hash_uid" type="text" placeholder="Enter CRC32-hashed uid here" required></input>
 		<button id="run">run</button>
 		<textarea id="result" readonly>result here</textarea>
 	</body>
